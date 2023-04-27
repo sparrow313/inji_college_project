@@ -97,11 +97,11 @@ const LandingPage = () => {
   return (
     <div className="landing-page">
       <div className="landing-page__form">
-        <h2>Enter your information:</h2>
+        <h2>Enter your information: 📃</h2>
         <form onSubmit={handleSubmit}>
           <div className="input_container1">
             <div className="landing-page__form-group">
-              <label htmlFor="age">Age:</label>
+              <label htmlFor="age">Age: 📅</label>
               <input
                 type="Number"
                 id="age"
@@ -111,34 +111,34 @@ const LandingPage = () => {
               />
             </div>
             <div className="landing-page__form-group">
-              <label htmlFor="sex">Sex:</label>
+              <label htmlFor="sex">Sex: 🚹 || 🚺</label>
               <select
                 id="sex"
                 value={sex}
                 onChange={(e) => setSex(e.target.value)}
               >
                 <option value="">Select Sex</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
+                <option value="male">Male 🚹</option>
+                <option value="female">Female 🚺</option>
               </select>
             </div>
           </div>
           <div className="input_container1">
             <div className="landing-page__form-group">
-              <label htmlFor="sex">Level of Activity:</label>
+              <label htmlFor="sex">Level of Activity: 🏃‍♀️</label>
               <select
                 id="sex"
                 value={activityLevel}
                 onChange={(e) => setActivityLevel(e.target.value)}
               >
                 <option value="">How active are you?</option>
-                <option value="active">Active</option>
-                <option value="moderatae">Moderately active</option>
-                <option value="sedentary">sedentary</option>
+                <option value="active">Active 🏃‍♂️</option>
+                <option value="moderatae">Moderately active 🚶‍♀️</option>
+                <option value="sedentary">sedentary 🛌</option>
               </select>
             </div>
             <div className="landing-page__form-group">
-              <label htmlFor="calories">Daily Calories:</label>
+              <label htmlFor="calories">Daily Calories: 🍔</label>
               <input
                 type="number"
                 id="calories"
@@ -153,8 +153,14 @@ const LandingPage = () => {
           </button>
         </form>
         {age && sex && activityLevel && dailyCalories && showImage === 1 ? (
-          <div>Your caloric range is <span style={{fontWeight: "bold"}}>{recommendedCalories}</span> calories <p style={{fontFamily : "monospace"}}>Below is a caloric chart that you can use to prep your meals</p></div>
-        
+          <div>
+            Your caloric range is{" "}
+            <span style={{ fontWeight: "bold" }}>{recommendedCalories}</span>{" "}
+            calories{" "}
+            <p style={{ fontFamily: "monospace", fontWeight: "bold" }}>
+              Below is a caloric chart that you can use to prep your meals 🍚
+            </p>
+          </div>
         ) : (
           ""
         )}
