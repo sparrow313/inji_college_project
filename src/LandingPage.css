@@ -112,10 +112,10 @@
 }
 
 button[type="submit"] {
-  background-color: #04310f;
+  background-color: #090a09;
   border: none;
   border-radius: 4px;
-  color: #f80606;
+  color:rgb(160, 22, 37);
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
@@ -125,7 +125,8 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #410a00;
+  background-color: #ffffff;
+  border: 1px solid #fff;
 }
 
 .landing-page__footer {
