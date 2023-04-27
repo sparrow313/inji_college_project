@@ -1,5 +1,5 @@
 .landing-page {
-  background: linear-gradient(to bottom right, #f12711, #b91d73);
+  /* background: linear-gradient(to bottom right, #f12711, #b91d73); */
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
 
 .landing-page__form {
   height: 99vh;
-  background-color: #963a7704;
+  background-color: #0e18037b;
   border-radius: 8px;
   padding: 32px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);

@@ -1,5 +1,6 @@
 .App {
   height: 100vh;
   width: 100%;
-  
+  background-image: url("https://res.cloudinary.com/ddimrh7vr/image/upload/v1682634507/brooke-lark-08bOYnH_r_E-unsplash_co5dnc.jpg");
+  object-fit: contain;
 }

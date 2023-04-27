@@ -6,7 +6,7 @@ import download from "downloadjs";
 const LandingPage = () => {
   const [age, setAge] = useState("");
   const [sex, setSex] = useState("");
-  const [activityLevel, setActivityLevel] = useState("sedentary");
+  const [activityLevel, setActivityLevel] = useState("How  active are you?");
   const [dailyCalories, setDailyCalories] = useState("");
   const [recommendedCalories, setRecommendedCalories] = useState("");
   const [showImage, setShowImage] = useState(0);
@@ -133,7 +133,7 @@ const LandingPage = () => {
               >
                 <option value="">How active are you?</option>
                 <option value="active">Active 🏃‍♂️</option>
-                <option value="moderatae">Moderately active 🚶‍♀️</option>
+                <option value="moderate">Moderately active 🚶‍♀️</option>
                 <option value="sedentary">sedentary 🛌</option>
               </select>
             </div>
