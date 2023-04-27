@@ -125,7 +125,7 @@ const LandingPage = () => {
           </div>
           <div className="input_container1">
             <div className="landing-page__form-group">
-              <label htmlFor="sex">Level of Activity: 🏃‍♀️</label>
+              <label htmlFor="sex">Activity Level: 🏃‍♀️</label>
               <select
                 id="sex"
                 value={activityLevel}
