@@ -3,6 +3,7 @@ import "./LandingPage.css";
 import pic from "./Assets/info.jpg";
 import download from "downloadjs";
 import { FaWeight } from "react-icons/fa";
+import { SiIfood } from "react-icons/si";
 
 const LandingPage = () => {
   const [age, setAge] = useState("");
@@ -82,7 +83,7 @@ const LandingPage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (age && sex && activityLevel && dailyCalories) {
+    if (age && sex && activityLevel && name && weight) {
       const recommendedCalories = calculateRecommendedCalories(
         sex,
         parseInt(age),
@@ -99,16 +100,25 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
-              <h2>Calorie Cruncher</h2>
+      <div
+        style={{
+          fontSize: "50px",
+          fontWeight: "bold",
+          marginTop: "20px",
+          marginBottom: "30px",
+        }}
+      >
+        E<span style={{ fontStyle: "italic" }}>at</span>F
+        <span style={{ fontStyle: "italic" }}>it</span> <SiIfood />
+      </div>
       <div className="landing-page__form">
         <h2>Enter your information: 📃</h2>
         <form onSubmit={handleSubmit}>
-        <div className="input_container1">
-        <div className="landing-page__form-group">
-          
+          <div className="input_container1">
+            <div className="landing-page__form-group">
               <label htmlFor="age">Name: 📝</label>
               <input
-                type="Number"
+                type="text"
                 id="age"
                 value={name}
                 placeholder="Enter Name"
@@ -116,7 +126,9 @@ const LandingPage = () => {
               />
             </div>
             <div className="landing-page__form-group">
-              <label htmlFor="age">Weight: <FaWeight/></label>
+              <label htmlFor="age">
+                Weight: <FaWeight />
+              </label>
               <input
                 type="Number"
                 id="age"
@@ -125,9 +137,8 @@ const LandingPage = () => {
                 onChange={(e) => setWeight(parseInt(e.target.value))}
               />
             </div>
-            </div>
+          </div>
           <div className="input_container1">
-          
             <div className="landing-page__form-group">
               <label htmlFor="age">Age: 📅</label>
               <input
@@ -152,7 +163,10 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="input_container1">
-            <div className="landing-page__form-group" style={{marginTop: "22px"}}>
+            <div
+              className="landing-page__form-group"
+              style={{ marginTop: "22px" }}
+            >
               <label htmlFor="sex">Activity Level: 🏃‍♀️</label>
               <select
                 id="sex"
@@ -180,28 +194,40 @@ const LandingPage = () => {
             Submit
           </button>
         </form>
-        {age && sex && activityLevel && dailyCalories && showImage === 1 ? (
-          <div>
+        {age && sex && activityLevel && name && weight && showImage === 1 ? (
+          <div style={{ marginTop: "15px" }}>
             Your caloric range is{" "}
-            <span style={{ fontWeight: "bold" }}>{recommendedCalories}</span>{" "}
+            <span style={{ fontWeight: "bold", color: "yellow" }}>
+              {recommendedCalories}
+            </span>{" "}
             calories{" "}
             <p style={{ fontFamily: "monospace", fontWeight: "bold" }}>
-              Below is a caloric chart that you can use to prep your meals 🍚
+              Below is a caloric chart that you can use to prepare your meals 🍚
             </p>
           </div>
         ) : (
           ""
         )}
-        {age && sex && activityLevel && dailyCalories && showImage === 1 ? (
+        {age && sex && activityLevel && name && weight && showImage === 1 ? (
           <div className="download">
-            <div className="image_container">
-              <img src={pic} className="image" alt="calorie chart" />
-            </div>
-            <div className="button_container">
-              <button className="download_btn" onClick={handleDownload}>
-                Download
-              </button>
-            </div>
+            <span id="under">➡ </span>
+            <a
+              href="https://res.cloudinary.com/ddimrh7vr/image/upload/v1682630576/info_aiuvug.jpg"
+              target="_blank"
+            >
+              Click here to get your calorie chart
+            </a>
+          </div>
+        ) : (
+          ""
+        )}
+        {age && sex && activityLevel && name && weight && showImage === 1 ? (
+          <div className="download">
+            <span id="under">➡ </span>
+            <a href="https://www.myfitnesspal.com" target="_blank">
+              Calculate your daily calorie needs based on your{" "}
+              <span style={{ marginLeft: "20px" }}>specific diet </span>
+            </a>
           </div>
         ) : (
           ""
@@ -209,7 +235,24 @@ const LandingPage = () => {
       </div>
 
       <div className="landing-page__footer">
-        <p style={{fontWeight : 700, fontSize: "16px", color: "black"}}>Project created by <br/>  <span style={{fontWeight : 700, fontSize: "20px", }}>Injamul Hoque and Sonia Musaddika</span></p>
+        <p style={{ fontWeight: 600, fontSize: "16px", color: "black" }}>
+          Project created by : <br />{" "}
+          <span
+            style={{ fontWeight: 700, fontSize: "20px", fontStyle: "italic" }}
+          >
+            <span >
+              <a style={{ color: "black", textDecoration: "none" }} href="https://www.facebook.com/injamul.hq.90">Injamul Hoque</a>
+            </span>{" "}
+            <br />{" "}
+            <span>
+              <a  style={{ color: "black", textDecoration: "none" }} href="https://www.facebook.com/so.nia.79025">
+                Sonia Musaddika
+              </a>
+            </span>
+            
+          </span>
+          <div  style={{ fontWeight: 400, fontSize: "18px", fontStyle: "italic" }}>(Mangaldai College)</div>
+        </p>
       </div>
     </div>
   );

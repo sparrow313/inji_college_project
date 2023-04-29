@@ -1,6 +1,13 @@
 .App {
-  height: 100vh;
+  height: auto;
   width: 100%;
-  background-image: url("https://res.cloudinary.com/ddimrh7vr/image/upload/v1682634507/brooke-lark-08bOYnH_r_E-unsplash_co5dnc.jpg");
-  object-fit: contain;
+  background-image: url("https://res.cloudinary.com/ddimrh7vr/image/upload/v1682765085/babs-gorniak-MduVxONB_xo-unsplash_g6l8ef.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  @media screen and (min-width: 1400px) {
+    height: 100vh;
+  }
+
+
 }

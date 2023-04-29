@@ -1,6 +1,6 @@
 .landing-page {
   /* background: linear-gradient(to bottom right, #f12711, #b91d73); */
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,7 +8,6 @@
 }
 
 .landing-page__form {
-  height: 99vh;
   background-color: #0e18037b;
   border-radius: 8px;
   padding: 32px;
@@ -22,36 +21,32 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 20px ;
-  margin-bottom: 20px ;
-  background-color: #04310f;
-  border: none;
-  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
-
-
-
 }
-.download button{
+.download a {
+  font-style: italic;
+  color: black;
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: #d8cb11;
-  border: 1px solid #a9c725;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
-  padding: 12px;
+  padding: 2px;
   transition: background-color 0.2s ease;
-
 }
-
+#under {
+text-decoration: none;
+color: #090a09;
+}
 .image_container {
   display: flex;
-  width:100%;
+  width: 100%;
   height: 100px;
   justify-content: center;
   align-items: center;
@@ -60,7 +55,6 @@
   width: 300px;
   height: 100px;
   object-fit: cover;
-  
 }
 .button_container {
   display: flex;
@@ -68,8 +62,8 @@
   align-items: center;
   justify-content: center;
   align-items: center;
-  margin-top: 20px ;
-  margin-bottom: 20px ;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .input_container1 {
@@ -115,7 +109,7 @@ button[type="submit"] {
   background-color: #090a09;
   border: none;
   border-radius: 4px;
-  color:rgb(160, 22, 37);
+  color: rgb(160, 22, 37);
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
@@ -132,7 +126,7 @@ button[type="submit"]:hover {
 .landing-page__footer {
   position: absolute;
   right: 20px;
-  bottom: 0;
+  bottom: 0px;
   color: #fff;
   font-size: 14px;
   font-weight: 500;
