@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./LandingPage.css";
 import pic from "./Assets/info.jpg";
 import download from "downloadjs";
+import { FaWeight } from "react-icons/fa";
 
 const LandingPage = () => {
   const [age, setAge] = useState("");
@@ -10,6 +11,8 @@ const LandingPage = () => {
   const [dailyCalories, setDailyCalories] = useState("");
   const [recommendedCalories, setRecommendedCalories] = useState("");
   const [showImage, setShowImage] = useState(0);
+  const [name, setName] = useState("");
+  const [weight, setWeight] = useState();
 
   const calorieRanges = {
     male: {
@@ -96,10 +99,35 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
+              <h2>Calorie Cruncher</h2>
       <div className="landing-page__form">
         <h2>Enter your information: 📃</h2>
         <form onSubmit={handleSubmit}>
+        <div className="input_container1">
+        <div className="landing-page__form-group">
+          
+              <label htmlFor="age">Name: 📝</label>
+              <input
+                type="Number"
+                id="age"
+                value={name}
+                placeholder="Enter Name"
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+            <div className="landing-page__form-group">
+              <label htmlFor="age">Weight: <FaWeight/></label>
+              <input
+                type="Number"
+                id="age"
+                value={weight}
+                placeholder="Enter Weight"
+                onChange={(e) => setWeight(parseInt(e.target.value))}
+              />
+            </div>
+            </div>
           <div className="input_container1">
+          
             <div className="landing-page__form-group">
               <label htmlFor="age">Age: 📅</label>
               <input
@@ -124,7 +152,7 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="input_container1">
-            <div className="landing-page__form-group">
+            <div className="landing-page__form-group" style={{marginTop: "22px"}}>
               <label htmlFor="sex">Activity Level: 🏃‍♀️</label>
               <select
                 id="sex"
@@ -138,7 +166,7 @@ const LandingPage = () => {
               </select>
             </div>
             <div className="landing-page__form-group">
-              <label htmlFor="calories">Daily Calories: 🍔</label>
+              <label htmlFor="calories">Daily Calories: 🍔 (optional)</label>
               <input
                 type="number"
                 id="calories"
@@ -181,7 +209,7 @@ const LandingPage = () => {
       </div>
 
       <div className="landing-page__footer">
-        <p>Project created by Injamul Haque</p>
+        <p style={{fontWeight : 700, fontSize: "16px", color: "black"}}>Project created by <br/>  <span style={{fontWeight : 700, fontSize: "20px", }}>Injamul Hoque and Sonia Musaddika</span></p>
       </div>
     </div>
   );
