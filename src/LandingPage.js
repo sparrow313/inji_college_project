@@ -106,6 +106,7 @@ const LandingPage = () => {
           fontWeight: "bold",
           marginTop: "20px",
           marginBottom: "30px",
+          color: "black"
         }}
       >
         E<span style={{ fontStyle: "italic" }}>at</span>F
