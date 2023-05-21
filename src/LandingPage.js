@@ -212,7 +212,7 @@ const LandingPage = () => {
           <div className="download">
             <span id="under">➡ </span>
             <a
-              href="https://res.cloudinary.com/ddimrh7vr/image/upload/v1682630576/info_aiuvug.jpg"
+              href="https://drive.google.com/file/d/1orUHkIiFSUeS5H4FbDfWuKmnBG2H6qYi/view?usp=share_link"
               target="_blank"
             >
               Click here to get your calorie chart
