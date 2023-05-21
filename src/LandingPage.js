@@ -212,7 +212,7 @@ const LandingPage = () => {
           <div className="download">
             <span id="under">➡ </span>
             <a
-              href="https://drive.google.com/file/d/1orUHkIiFSUeS5H4FbDfWuKmnBG2H6qYi/view?usp=share_link"
+              href="https://drive.google.com/file/d/1yGEZmJwR08Tev0ZfoVl542pAtwZDzx61/view?usp=share_link"
               target="_blank"
             >
               Click here to get your calorie chart
